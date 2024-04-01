@@ -6,6 +6,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 .hyther {
     display: flex;
@@ -20,7 +21,6 @@ body {
     border: 3px solid pink;
     border-radius: 50%;
 }
-
 .profile-picture img {
     width: 100%;
     height: auto;
@@ -28,8 +28,8 @@ body {
 }
 .centered-block {
     background-color: rgba(255, 255, 255, 0.8);
-    width: 500px;
-    height: 930px;
+    width: 90%;
+    max-width: 500px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -37,6 +37,7 @@ body {
     text-align: center;
     font-size: 18px;
     font-weight: bold;
+    position: relative;
 }
 .link-block {
     display: flex;
@@ -54,6 +55,9 @@ body {
 .link-block:hover {
     background-color: rgba(113, 241, 255, 0.3);
 }
+.link-block:last-child {
+    margin-bottom: 35px;
+}
 .link-image {
     width: 50px;
     height: 50px;
@@ -68,3 +72,57 @@ body {
     font-weight: bold;
     font-size: 24px;
 }
+
+@media (min-width: 0px) and (max-width: 992px){
+    .profile-picture {
+        width: 25%;
+        height: 25%;
+        overflow: hidden;
+        margin: 20px auto;
+        border: 3px solid pink;
+        border-radius: 50%;
+    }
+    .profile-picture img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+    }
+    .centered-block {
+        width: 90%;
+        max-width: none;
+    }
+    .link-block {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1%;
+        cursor: pointer;
+        padding: 2%;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        transition: background-color 0.4s ease;
+        height: 10%;/*50px*/
+        width: 80%; /*400px*/
+        text-decoration: none;
+    }
+    .link-block:hover {
+        background-color: rgba(113, 241, 255, 0.3);
+    }
+    .link-block:last-child {
+        margin-bottom: 8%;
+    }
+    .link-image {
+        width: 11%; /*50px*/
+        height: 11%; /*50px*/
+        margin-right: 1%;
+        border-radius: 50%;
+    }
+    .link-name {
+        font-weight: bold;
+        color: gray;
+        font-size: 170%; /*24px*/
+    }
+    .description {
+        font-weight: bold;
+        font-size: 250%; /*24px*/
+    }
+} 
