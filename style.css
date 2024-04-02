@@ -72,6 +72,23 @@ body {
     font-weight: bold;
     font-size: 24px;
 }
+.others {
+    font-size: 20px;
+    text-align: left;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: auto;
+    width: 400px;
+}
+.copytext {
+    cursor: pointer;
+}
+.copytext:hover {
+    color: lightblue;
+}
 
 @media (min-width: 0px) and (max-width: 992px){
     .profile-picture {
@@ -124,5 +141,16 @@ body {
     .description {
         font-weight: bold;
         font-size: 250%; /*24px*/
+    }
+    .others {
+        font-size: 200%;
+        text-align: left;
+        align-items: center;
+        margin-bottom: 1%;
+        padding: 2%;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        height: auto;
+        width: 80%;
     }
 } 
